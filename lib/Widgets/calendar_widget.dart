@@ -29,6 +29,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
   Widget build(BuildContext context) {
     return Center(
         child: TableCalendar(
+          headerVisible: true,
           selectedDayPredicate: (day) => isSameDay(day, today),
           onDaySelected: onDaySelected,
           calendarStyle: CalendarStyle(

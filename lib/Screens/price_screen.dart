@@ -1,3 +1,4 @@
+import 'package:airbnb_trips_concept/Screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import '../Widgets/widgets.dart';
 
@@ -106,15 +107,20 @@ class _PriceScreenState extends State<PriceScreen> with TickerProviderStateMixin
           Positioned(
             bottom: 120,
               left: (size.width / 2) - 30,
-              child: Container(
-                height: 60,
-                width: 60,
-                decoration: const BoxDecoration(
-                  color: Colors.red,
-                  shape: BoxShape.circle
-                ),
-                child: const Center(
-                  child: Icon(Icons.fingerprint, color: Colors.white, size: 45,),
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const HomeScreen()));
+                },
+                child: Container(
+                  height: 60,
+                  width: 60,
+                  decoration: const BoxDecoration(
+                    color: Colors.red,
+                    shape: BoxShape.circle
+                  ),
+                  child: const Center(
+                    child: Icon(Icons.fingerprint, color: Colors.white, size: 45,),
+                  ),
                 ),
               )
           )

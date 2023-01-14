@@ -34,7 +34,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
 
     circleAnimationController.forward();
-    print(circleAnimationController.value.toString());
 
     circleAnimationController.addStatusListener((status)
     {
@@ -46,7 +45,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       }
     });
 
-    print(circleAnimationController.value.toString());
 
     starAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
 
